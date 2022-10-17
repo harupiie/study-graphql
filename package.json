@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "study-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.15.2",
+    "apollo-server": "^2.26.0",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "prisma": "^3.15.2"
+  }
+}
