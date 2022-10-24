@@ -1,0 +1,43 @@
+"""
+GraphQLスキーマ定義ファイル
+"""
+type Query {
+  fetchPosts: [Post]!
+}
+
+type Mutation {
+  signup(email: String!, password: String!, name: String!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+  createPost(body: String!): Post!
+  addLike(postId: ID!): Like
+}
+
+type Subscription {
+  newPost: Post
+  newLike: Like
+}
+
+type Post {
+  id: ID!
+  body: String!
+  createdBy: User
+  likes: [Like!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  posts: [Post!]!
+}
+
+type Like {
+  id: ID!
+  post: Post!
+  user: User!
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
